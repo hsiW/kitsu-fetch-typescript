@@ -1,0 +1,28 @@
+{
+  "name": "kitsu-fetch-typescript",
+  "version": "1.0.0",
+  "description": "Kitsu Fetch but Typescript",
+  "main": "/src/index.js",
+  "type": "common",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node build/index.js",
+    "run": "yarn run build && yarn run start"
+  },
+  "author": "Mei",
+  "private": true,
+  "license": "ISC",
+  "dependencies": {
+    "@types/node-fetch": "^2.5.7",
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^13.13.2",
+    "@typescript-eslint/eslint-plugin": "^2.29.0",
+    "@typescript-eslint/eslint-plugin-tslint": "^2.29.0",
+    "@typescript-eslint/parser": "^2.29.0",
+    "eslint": "^6.8.0",
+    "ts-node": "^8.9.0",
+    "tslint": "^6.1.1"
+  }
+}
