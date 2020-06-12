@@ -50,7 +50,7 @@ async function request(url: string) {
   return (await response.json()).data;
 }
 
-export default {
+export {
   searchAnime,
   getAnime,
   searchManga,

@@ -7,13 +7,5 @@ declare function searchManga(searchArgs: string, pageOffset?: number): Promise<M
 declare function getManga(mangaID: number): Promise<Manga>;
 declare function searchCharacters(searchArgs: string, pageOffset?: number): Promise<Character[]>;
 declare function getCharacter(characterID: number): Promise<Character>;
-declare const _default: {
-    searchAnime: typeof searchAnime;
-    getAnime: typeof getAnime;
-    searchManga: typeof searchManga;
-    getManga: typeof getManga;
-    searchCharacters: typeof searchCharacters;
-    getCharacter: typeof getCharacter;
-};
-export default _default;
+export { searchAnime, getAnime, searchManga, getManga, searchCharacters, getCharacter };
 //# sourceMappingURL=index.d.ts.map
