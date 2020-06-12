@@ -1,6 +1,4 @@
-build
+src
 node_modules
-src/config
-src/files
 .vscode
 yarn.lock
