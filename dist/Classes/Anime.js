@@ -1,0 +1,37 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+class Anime {
+    constructor(id, data) {
+        this.id = id;
+        this.type = data.subtype || null;
+        this.titles = {
+            english: data.titles.en || null,
+            romanji: data.titles.en_jp || null,
+            japanese: data.titles.ja_jp || null,
+            canonical: data.canonicalTitle || null,
+            abbrivated: data.abbrivatedTitles || [],
+        };
+        this.synopsis = data.synopsis || null;
+        this.episodeCount = data.episodeCount || null;
+        this.episodeLength = data.episodeLength || null;
+        this.startDate = data.startDate || null;
+        this.endDate = data.endDate || null;
+        this.ageRating = data.ageRating || null;
+        this.ageRatingGuide = data.ageRatingGuide || null;
+        this.rating = parseFloat(data.averageRating) || null;
+        this.ratingRank = data.ratingRank || null;
+        this.popularityRank = data.popularityRank || null;
+        this.userCount = data.userCount || 0;
+        this.favoritesCount = data.favoritesCount || 0;
+        this.nsfw = data.nsfw;
+        this.images = {
+            posterImage: data.posterImage || null,
+            coverImage: data.coverImage || null,
+        };
+    }
+    get url() {
+        return `https://kitsu.io/anime/${this.id}/`;
+    }
+}
+exports.default = Anime;
+//# sourceMappingURL=Anime.js.map

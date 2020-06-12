@@ -2,7 +2,8 @@
   "name": "kitsu-fetch-typescript",
   "version": "1.0.0",
   "description": "Kitsu Fetch but Typescript",
-  "main": "/src/index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "type": "common",
   "scripts": {
     "build": "tsc -p tsconfig.json",
