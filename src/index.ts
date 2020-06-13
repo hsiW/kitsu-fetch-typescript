@@ -1,7 +1,7 @@
 import { default as fetch, Response } from 'node-fetch';
-import Anime from 'Classes/Anime';
-import Manga from 'Classes/Manga';
-import Character from 'Classes/Character';
+import Anime from './Classes/Anime';
+import Manga from './Classes/Manga';
+import Character from './Classes/Character';
 
 async function searchAnime(searchArgs: string, pageOffset = 0): Promise<Anime[]> {
   const response: any[] = await request(`/anime?${encodeURIComponent(`filter[text]=${searchArgs}&page[offset]=${pageOffset}`)}`);

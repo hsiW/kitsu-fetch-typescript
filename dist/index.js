@@ -5,9 +5,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getCharacter = exports.searchCharacters = exports.getManga = exports.searchManga = exports.getAnime = exports.searchAnime = void 0;
 const node_fetch_1 = __importDefault(require("node-fetch"));
-const Anime_1 = __importDefault(require("Classes/Anime"));
-const Manga_1 = __importDefault(require("Classes/Manga"));
-const Character_1 = __importDefault(require("Classes/Character"));
+const Anime_1 = __importDefault(require("./Classes/Anime"));
+const Manga_1 = __importDefault(require("./Classes/Manga"));
+const Character_1 = __importDefault(require("./Classes/Character"));
 async function searchAnime(searchArgs, pageOffset = 0) {
     const response = await request(`/anime?${encodeURIComponent(`filter[text]=${searchArgs}&page[offset]=${pageOffset}`)}`);
     return response.map(anime => new Anime_1.default(anime.id, anime.attributes));

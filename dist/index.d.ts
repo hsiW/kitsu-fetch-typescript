@@ -1,6 +1,6 @@
-import Anime from 'Classes/Anime';
-import Manga from 'Classes/Manga';
-import Character from 'Classes/Character';
+import Anime from './Classes/Anime';
+import Manga from './Classes/Manga';
+import Character from './Classes/Character';
 declare function searchAnime(searchArgs: string, pageOffset?: number): Promise<Anime[]>;
 declare function getAnime(animeID: number): Promise<Anime>;
 declare function searchManga(searchArgs: string, pageOffset?: number): Promise<Manga[]>;
