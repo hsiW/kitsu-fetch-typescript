@@ -7,5 +7,5 @@ declare function searchManga(searchArgs: string, pageOffset?: number): Promise<M
 declare function getManga(mangaID: number): Promise<Manga>;
 declare function searchCharacters(searchArgs: string, pageOffset?: number): Promise<Character[]>;
 declare function getCharacter(characterID: number): Promise<Character>;
-export { searchAnime, getAnime, searchManga, getManga, searchCharacters, getCharacter };
+export { Anime, Character, Manga, searchAnime, getAnime, searchManga, getManga, searchCharacters, getCharacter };
 //# sourceMappingURL=index.d.ts.map

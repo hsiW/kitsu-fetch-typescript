@@ -51,6 +51,9 @@ async function request(url: string) {
 }
 
 export {
+  Anime,
+  Character,
+  Manga,
   searchAnime,
   getAnime,
   searchManga,
