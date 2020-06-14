@@ -22,8 +22,8 @@ export default class Anime {
     favoritesCount: number | null;
     nsfw: boolean;
     images: {
-        posterImage: string | null;
-        coverImage: string | null;
+        posterImage: any | null;
+        coverImage: any | null;
     };
     constructor(id: number, data: any);
     get url(): string;

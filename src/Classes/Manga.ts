@@ -18,8 +18,8 @@ export default class Manga {
     ratingRank: number | null;
     popularityRank: number | null;
     images: { 
-        posterImage: string | null; 
-        coverImage: string | null; 
+        posterImage: any | null; 
+        coverImage: any | null; 
     };
 	constructor(id: number, data: any) {
 		this.id = id;
