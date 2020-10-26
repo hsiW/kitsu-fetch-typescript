@@ -31,8 +31,8 @@ async function getManga(mangaID) {
     return new Manga_1.default(manga.id, manga.attributes);
 }
 exports.getManga = getManga;
-async function searchCharacters(searchArgs, pageOffset = 0) {
-    const response = await request(`/characters?${encodeURIComponent(`filter[name]=${searchArgs}&page[offset]=${pageOffset}`)}`);
+async function searchCharacters(searchArgs) {
+    const response = await request(`/characters?${encodeURIComponent(`filter[name]=${searchArgs}`)}`);
     return response.map(character => new Character_1.default(character.id, character.attributes));
 }
 exports.searchCharacters = searchCharacters;

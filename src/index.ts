@@ -27,8 +27,8 @@ async function getManga(mangaID: number): Promise<Manga> {
   return new Manga(manga.id, manga.attributes);
 }
 
-async function searchCharacters(searchArgs: string, pageOffset = 0): Promise<Character[]> {
-  const response: any[] = await request(`/characters?${encodeURIComponent(`filter[name]=${searchArgs}&page[offset]=${pageOffset}`)}`);
+async function searchCharacters(searchArgs: string): Promise<Character[]> {
+  const response: any[] = await request(`/characters?${encodeURIComponent(`filter[name]=${searchArgs}`)}`);
 
   return response.map(character => new Character(character.id, character.attributes));
 }
